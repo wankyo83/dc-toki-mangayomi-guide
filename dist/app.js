@@ -1,6 +1,24 @@
 const toast = document.querySelector('.toast');
 let toastTimer;
 
+const weekdayCards = [
+  ['sunday', '일요일'],
+  ['monday', '월요일'],
+  ['tuesday', '화요일'],
+  ['wednesday', '수요일'],
+  ['thursday', '목요일'],
+  ['friday', '금요일'],
+  ['saturday', '토요일'],
+];
+const currentWeekday = weekdayCards[new Date().getDay()];
+const currentWeekdayCard = document.getElementById('current-weekday-card');
+const currentWeekdayLabel = document.getElementById('current-weekday-label');
+if (currentWeekdayCard && currentWeekdayLabel) {
+  currentWeekdayCard.src = `https://dc-toki-mangayomi-media.pages.dev/card/weekday-${currentWeekday[0]}.gif`;
+  currentWeekdayCard.alt = `현재 ${currentWeekday[1]} 기본 요일 목록 카드`;
+  currentWeekdayLabel.textContent = `현재 ${currentWeekday[1]} 기본 요일 목록 카드`;
+}
+
 function showToast(message = '복사했습니다.') {
   toast.textContent = message;
   toast.classList.add('show');
