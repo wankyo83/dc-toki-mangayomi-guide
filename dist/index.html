@@ -136,9 +136,30 @@
   }
 }</code></pre></div>
             <div class="instruction-grid">
-              <article><span>01</span><h3>파일 준비</h3><p>위 예시를 <code>custom-list-card.json</code>으로 저장하고 이미지 주소를 입력합니다.</p></article>
-              <article><span>02</span><h3>공개 공유</h3><p>JSON과 이미지 모두 <b>링크가 있는 모든 사용자</b>가 볼 수 있게 공개합니다.</p></article>
-              <article><span>03</span><h3>확장앱 설정</h3><p>설치한 확장앱 설정의 <b>커스텀 목록 카드 (선택)</b>에 JSON 공유 주소를 붙여 넣습니다.</p></article>
+              <article><span>01</span><h3>파일 준비</h3><p>기본 JSON을 내려받고 사용할 GIF·JPG 등의 카드 이미지를 준비합니다.</p></article>
+              <article><span>02</span><h3>Drive에 공개</h3><p>이미지와 JSON을 Google Drive에 올리고 모두 공개 공유로 설정합니다.</p></article>
+              <article><span>03</span><h3>확장앱에 등록</h3><p>JSON 공유 링크를 복사해 원하는 확장앱의 커스텀 목록 카드에 입력합니다.</p></article>
+            </div>
+            <div class="visual-guide">
+              <article class="visual-step">
+                <div class="visual-copy"><span>01 · UPLOAD</span><h3>카드 이미지와 JSON을 Google Drive에 올립니다</h3><p>공통 카드 한 장만 쓸 수도 있고, 월요일부터 일요일까지 요일별 GIF·JPG 파일을 준비할 수도 있습니다. 다운로드한 <code>custom-list-card.json</code>도 함께 올리세요.</p></div>
+                <figure class="screenshot"><button type="button" data-lightbox="./assets/05-drive-files.png" aria-label="Google Drive 파일 목록 크게 보기"><img src="./assets/05-drive-files.png" alt="Google Drive에 업로드한 커스텀 목록 카드 JSON과 요일별 GIF 파일" /></button><figcaption>파일 이름은 자유롭게 정해도 됩니다. JSON 안의 주소만 정확하면 됩니다.</figcaption></figure>
+              </article>
+              <article class="visual-step">
+                <div class="visual-copy"><span>02 · SHARE</span><h3>모든 파일을 ‘링크가 있는 모든 사용자’로 공개합니다</h3><p>이미지 파일과 JSON 파일을 각각 우클릭하고 <b>공유</b>를 누른 뒤, 일반 액세스를 <b>링크가 있는 모든 사용자 · 뷰어</b>로 바꾸고 링크를 복사합니다.</p></div>
+                <div class="screen-pair">
+                  <figure class="screenshot"><button type="button" data-lightbox="./assets/06-drive-share.png" aria-label="Google Drive 공유 설정 크게 보기"><img src="./assets/06-drive-share.png" alt="Google Drive 일반 액세스가 링크가 있는 모든 사용자와 뷰어로 설정된 화면" /></button><figcaption>일반 액세스: 링크가 있는 모든 사용자</figcaption></figure>
+                  <figure class="screenshot"><button type="button" data-lightbox="./assets/09-shared-files.png" aria-label="공유된 파일 표시 크게 보기"><img src="./assets/09-shared-files.png" alt="Google Drive에서 공유 아이콘이 표시된 JSON과 이미지 파일" /></button><figcaption>JSON과 이미지 모두 공유 아이콘이 보여야 합니다.</figcaption></figure>
+                </div>
+              </article>
+              <div class="critical-note"><b>가장 중요한 설정</b><p>JSON만 공개하거나 이미지만 공개하면 카드가 나오지 않습니다. <strong>JSON과 JSON 안에 적은 모든 이미지 파일을 전부 공개 공유</strong>해야 합니다.</p></div>
+              <article class="visual-step">
+                <div class="visual-copy"><span>03 · CONNECT</span><h3>JSON 링크를 원하는 확장앱에 등록합니다</h3><p>JSON 안에 이미지 공유 링크를 입력해 저장한 뒤, JSON 파일의 공유 링크를 복사합니다. 커스텀 카드를 적용할 확장앱의 상세 설정을 열어 <b>커스텀 목록 카드</b> 입력란에 붙여 넣으세요.</p></div>
+                <div class="screen-stack">
+                  <figure class="screenshot slim"><button type="button" data-lightbox="./assets/07-extension-menu.png" aria-label="확장앱 화면 메뉴 크게 보기"><img src="./assets/07-extension-menu.png" alt="Mangayomi 확장앱 화면 오른쪽 위 메뉴 위치" /></button><figcaption>확장앱 화면 오른쪽 위 메뉴에서 상세 설정으로 들어갑니다.</figcaption></figure>
+                  <figure class="screenshot"><button type="button" data-lightbox="./assets/08-custom-card-setting.png" aria-label="커스텀 목록 카드 설정 크게 보기"><img src="./assets/08-custom-card-setting.png" alt="Mangayomi 확장앱 설정의 커스텀 목록 카드 입력 항목" /></button><figcaption>커스텀 목록 카드 항목에 공개된 JSON 공유 링크를 입력합니다.</figcaption></figure>
+                </div>
+              </article>
             </div>
             <div class="fact-grid">
               <div><b>지원 파일</b><p>PNG · JPG · WEBP · GIF</p></div><div><b>권장 크기</b><p>360 × 540 px</p></div><div><b>GIF 권장 용량</b><p>약 2~5MB</p></div><div><b>JSON 캐시</b><p>최대 약 5분</p></div>
@@ -146,7 +167,7 @@
             <div class="notes">
               <h3>알아둘 점</h3>
               <ul>
-                <li>Google Drive의 일반 공유 주소를 그대로 사용할 수 있습니다.</li>
+                <li>Google Drive의 일반 공유 주소를 그대로 사용할 수 있습니다. 직접 다운로드 주소로 바꿀 필요가 없습니다.</li>
                 <li>이미지를 바꿨는데 이전 이미지가 남으면 <code>revision</code> 값을 새 값으로 변경하세요.</li>
                 <li>커스텀 JSON 주소를 입력한 사용자는 공개 이벤트 카드 대신 개인 카드가 표시됩니다.</li>
                 <li>설정은 확장앱별로 저장되므로 같은 카드를 쓸 확장앱마다 같은 JSON 주소를 입력해야 합니다.</li>
