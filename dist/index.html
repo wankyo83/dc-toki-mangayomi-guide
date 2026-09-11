@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Mangayomi 설치부터 DC 확장 저장소 등록, 커스텀 목록 카드 설정까지 한 번에 안내합니다." />
+    <meta name="theme-color" content="#071425" />
+    <title>Mangayomi 설치 및 DC 확장앱 가이드</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="맨 위로 이동">
+        <span class="brand-mark">M</span>
+        <span><strong>Mangayomi Guide</strong><small>DC TOKI EXTENSIONS</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="주요 메뉴">
+        <a href="#install">설치</a><a href="#repository">저장소 등록</a><a href="#extensions">확장앱 설치</a><a href="#custom-card">커스텀 카드</a><a href="#help">문제 해결</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+      <nav class="mobile-nav" aria-label="모바일 메뉴">
+        <a href="#install">설치</a><a href="#repository">저장소 등록</a><a href="#extensions">확장앱 설치</a><a href="#custom-card">커스텀 카드</a><a href="#help">문제 해결</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-grid"></div><div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">iOS · Android · Windows</span>
+            <h1>Mangayomi와<br /><em>DC 확장앱</em> 시작하기</h1>
+            <p>앱 설치부터 저장소 등록, 확장앱 설치, 나만의 목록 카드 설정까지 필요한 과정만 순서대로 정리했습니다.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#install">설치 시작</a>
+              <a class="button ghost" href="#repository">저장소 주소 보기</a>
+            </div>
+            <div class="hero-notice"><span>!</span><p><b>먼저 확인</b> 네트워크 오류가 잦다면 Cloudflare 1.1.1.1 WARP 설치를 권장합니다.</p></div>
+          </div>
+          <aside class="hero-panel" aria-label="설치 과정 요약">
+            <div class="panel-head"><span>QUICK START</span><b>4 STEPS</b></div>
+            <ol>
+              <li><span>01</span><div><b>Mangayomi 설치</b><small>기기에 맞는 앱 준비</small></div></li>
+              <li><span>02</span><div><b>소스 표시 허용</b><small>Browse 설정 한 번 확인</small></div></li>
+              <li><span>03</span><div><b>저장소 주소 등록</b><small>만화 · 미디어 · 소설</small></div></li>
+              <li><span>04</span><div><b>확장앱 설치 후 사용</b><small>원하는 소스에서 바로 감상</small></div></li>
+            </ol>
+          </aside>
+        </div>
+      </section>
+
+      <div class="page-shell">
+        <aside class="side-nav">
+          <p>GUIDE INDEX</p>
+          <a href="#install"><span>01</span> 앱 설치</a>
+          <a href="#repository"><span>02</span> 저장소 등록</a>
+          <a href="#extensions"><span>03</span> 확장앱 설치</a>
+          <a href="#custom-card"><span>04</span> 커스텀 목록 카드</a>
+          <a href="#help"><span>05</span> 문제 해결</a>
+          <div class="side-tip"><b>주소는 복사 버튼으로</b><br />오타 없이 한 번에 등록할 수 있습니다.</div>
+        </aside>
+
+        <div class="content">
+          <section class="guide-section" id="install">
+            <div class="chapter"><span>STEP 01</span><b>APPLICATION</b></div>
+            <div class="section-title"><span>INSTALL</span><h2>Mangayomi를 설치합니다</h2><p>Android와 Windows는 공식 홈페이지 또는 GitHub에서 받을 수 있습니다. iOS는 App Store 배포가 아니므로 별도 설치 안내를 확인하세요.</p></div>
+            <div class="link-grid">
+              <a class="link-card" href="https://mangayomi.org/" target="_blank" rel="noreferrer"><small>OFFICIAL</small><b>Mangayomi 홈페이지</b><span>mangayomi.org ↗</span></a>
+              <a class="link-card" href="https://github.com/kodjodevf/mangayomi" target="_blank" rel="noreferrer"><small>DOWNLOAD</small><b>공식 GitHub</b><span>Releases 확인 ↗</span></a>
+              <a class="link-card ios" href="https://gall.dcinside.com/mgallery/board/view/?id=ranking1&no=204&page=1" target="_blank" rel="noreferrer"><small>iOS GUIDE</small><b>iPhone · iPad 설치법</b><span>별도 설치 안내 ↗</span></a>
+            </div>
+            <div class="callout"><span>권장</span><div><b>1.1.1.1 WARP</b><p>사이트 접속이나 이미지·영상 로딩에서 네트워크 오류가 반복될 때 도움이 될 수 있습니다. 반드시 필요한 것은 아닙니다.</p></div><a href="https://one.one.one.one/" target="_blank" rel="noreferrer">공식 안내</a></div>
+          </section>
+
+          <section class="guide-section" id="repository">
+            <div class="chapter"><span>STEP 02</span><b>REPOSITORIES</b></div>
+            <div class="section-title"><span>SETTINGS</span><h2>확장 저장소를 등록합니다</h2><p>먼저 비공식 소스가 목록에 표시되도록 설정한 뒤, 사용할 종류의 저장소 주소를 입력합니다.</p></div>
+            <div class="step-card"><div class="step-no">01</div><div class="step-copy"><h3>비공식 소스 표시 켜기</h3><p><b>Settings → Browse</b>에서 <code>Show in sources and extensions lists</code>를 켭니다.</p></div></div>
+            <figure class="screenshot"><button type="button" data-lightbox="./assets/01-enable-sources.png" aria-label="스크린샷 크게 보기"><img src="./assets/01-enable-sources.png" alt="Show in sources and extensions lists 설정이 켜진 Mangayomi Browse 설정 화면" /></button><figcaption>오른쪽 스위치가 파란색이면 켜진 상태입니다.</figcaption></figure>
+            <div class="step-card"><div class="step-no">02</div><div class="step-copy"><h3>저장소 메뉴 열기</h3><p>같은 화면 위쪽에서 <b>Manga extensions repo</b>, <b>Anime extensions repo</b>, <b>Novel extensions repo</b> 중 필요한 항목을 선택합니다.</p></div></div>
+            <figure class="screenshot"><button type="button" data-lightbox="./assets/02-repository-menu.png" aria-label="스크린샷 크게 보기"><img src="./assets/02-repository-menu.png" alt="Mangayomi Browse 설정의 Manga, Anime, Novel extensions repo 메뉴" /></button><figcaption>만화와 미디어는 각각 다른 저장소 주소를 사용합니다.</figcaption></figure>
+            <div class="repo-grid">
+              <article class="repo-card"><span class="repo-type manga">MANGA</span><h3>만화 확장 저장소</h3><div class="copy-row"><code>https://dc-toki-mangayomi-manga.pages.dev/index.min.json</code><button type="button" data-copy="https://dc-toki-mangayomi-manga.pages.dev/index.min.json">복사</button></div></article>
+              <article class="repo-card"><span class="repo-type media">ANIME</span><h3>미디어 확장 저장소</h3><div class="copy-row"><code>https://dc-toki-mangayomi-media.pages.dev/index.min.json</code><button type="button" data-copy="https://dc-toki-mangayomi-media.pages.dev/index.min.json">복사</button></div></article>
+              <article class="repo-card"><span class="repo-type novel">NOVEL</span><h3>소설 확장 저장소</h3><div class="copy-row"><code>https://dc-toki-mangayomi-novel.pages.dev/index.min.json</code><button type="button" data-copy="https://dc-toki-mangayomi-novel.pages.dev/index.min.json">복사</button></div></article>
+            </div>
+          </section>
+
+          <section class="guide-section" id="extensions">
+            <div class="chapter"><span>STEP 03</span><b>EXTENSIONS</b></div>
+            <div class="section-title"><span>BROWSE</span><h2>확장앱을 설치하고 실행합니다</h2><p>메인 화면의 Browse에서 확장앱을 설치한 다음, Sources 탭에서 원하는 소스를 선택하면 됩니다.</p></div>
+            <div class="two-column">
+              <div><div class="step-card compact"><div class="step-no">01</div><div class="step-copy"><h3>확장앱 설치</h3><p><b>Browse → Manga Extensions / Anime Extensions / Novel Extensions</b>에서 오른쪽 다운로드 아이콘을 누릅니다.</p></div></div><figure class="screenshot"><button type="button" data-lightbox="./assets/03-install-extension.png" aria-label="확장앱 설치 화면 크게 보기"><img src="./assets/03-install-extension.png" alt="Mangayomi Manga Extensions 목록과 다운로드 아이콘" /></button><figcaption>등록한 저장소의 확장앱이 표시됩니다.</figcaption></figure></div>
+              <div><div class="step-card compact"><div class="step-no">02</div><div class="step-copy"><h3>소스 열기</h3><p><b>Manga Sources / Anime Sources / Novel Sources</b>에서 설치한 확장앱을 선택합니다.</p></div></div><figure class="screenshot"><button type="button" data-lightbox="./assets/04-use-source.png" aria-label="소스 목록 화면 크게 보기"><img src="./assets/04-use-source.png" alt="Mangayomi Manga Sources에 설치된 확장앱 목록" /></button><figcaption>자주 쓰는 소스는 오른쪽 핀으로 고정할 수 있습니다.</figcaption></figure></div>
+            </div>
+          </section>
+
+          <section class="guide-section" id="custom-card">
+            <div class="chapter accent"><span>STEP 04</span><b>PERSONALIZE</b></div>
+            <div class="section-title"><span>CUSTOM LIST CARD</span><h2>나만의 목록 카드를 설정합니다</h2><p>확장앱 첫 번째 목록 카드 이미지를 한 장으로 통일하거나, 요일마다 다르게 표시할 수 있습니다. 공개된 JSON 주소 하나만 설정하면 됩니다.</p></div>
+            <div class="priority"><b>표시 우선순위</b><span>오늘 요일 카드</span><i>→</i><span>공통 카드</span><i>→</i><span>확장앱 기본 카드</span></div>
+            <div class="tabs" role="tablist" aria-label="JSON 예시 선택">
+              <button class="tab active" type="button" role="tab" aria-selected="true" data-tab="single">공통 카드 한 장</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="weekday">요일별 카드</button>
+            </div>
+            <div class="code-panel active" data-panel="single"><div class="code-head"><span>custom-list-card.json</span><button type="button" data-copy-target="single-code">JSON 복사</button></div><pre id="single-code"><code>{
+  "version": 1,
+  "revision": "2026-09-11-1",
+  "card": "https://drive.google.com/file/d/파일ID/view?usp=sharing",
+  "cards": {
+    "monday": "",
+    "tuesday": "",
+    "wednesday": "",
+    "thursday": "",
+    "friday": "",
+    "saturday": "",
+    "sunday": ""
+  }
+}</code></pre></div>
+            <div class="code-panel" data-panel="weekday"><div class="code-head"><span>custom-list-card.json</span><button type="button" data-copy-target="weekday-code">JSON 복사</button></div><pre id="weekday-code"><code>{
+  "version": 1,
+  "revision": "2026-09-11-1",
+  "card": "",
+  "cards": {
+    "monday": "월요일 이미지 주소",
+    "tuesday": "화요일 이미지 주소",
+    "wednesday": "수요일 이미지 주소",
+    "thursday": "목요일 이미지 주소",
+    "friday": "금요일 이미지 주소",
+    "saturday": "토요일 이미지 주소",
+    "sunday": "일요일 이미지 주소"
+  }
+}</code></pre></div>
+            <div class="instruction-grid">
+              <article><span>01</span><h3>파일 준비</h3><p>위 예시를 <code>custom-list-card.json</code>으로 저장하고 이미지 주소를 입력합니다.</p></article>
+              <article><span>02</span><h3>공개 공유</h3><p>JSON과 이미지 모두 <b>링크가 있는 모든 사용자</b>가 볼 수 있게 공개합니다.</p></article>
+              <article><span>03</span><h3>확장앱 설정</h3><p>설치한 확장앱 설정의 <b>커스텀 목록 카드 (선택)</b>에 JSON 공유 주소를 붙여 넣습니다.</p></article>
+            </div>
+            <div class="fact-grid">
+              <div><b>지원 파일</b><p>PNG · JPG · WEBP · GIF</p></div><div><b>권장 크기</b><p>360 × 540 px</p></div><div><b>GIF 권장 용량</b><p>약 2~5MB</p></div><div><b>JSON 캐시</b><p>최대 약 5분</p></div>
+            </div>
+            <div class="notes">
+              <h3>알아둘 점</h3>
+              <ul>
+                <li>Google Drive의 일반 공유 주소를 그대로 사용할 수 있습니다.</li>
+                <li>이미지를 바꿨는데 이전 이미지가 남으면 <code>revision</code> 값을 새 값으로 변경하세요.</li>
+                <li>커스텀 JSON 주소를 입력한 사용자는 공개 이벤트 카드 대신 개인 카드가 표시됩니다.</li>
+                <li>설정은 확장앱별로 저장되므로 같은 카드를 쓸 확장앱마다 같은 JSON 주소를 입력해야 합니다.</li>
+                <li>주소가 비어 있거나 불러오기에 실패하면 확장앱 기본 카드로 돌아갑니다.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="guide-section last" id="help">
+            <div class="chapter"><span>STEP 05</span><b>TROUBLESHOOTING</b></div>
+            <div class="section-title"><span>HELP</span><h2>잘 안 될 때 확인하세요</h2></div>
+            <div class="faq">
+              <details><summary>저장소를 등록했는데 확장앱이 안 보여요</summary><p><code>Show in sources and extensions lists</code>가 켜져 있는지 확인하고, Browse 화면에서 새로고침하거나 앱을 다시 실행하세요.</p></details>
+              <details><summary>사이트·이미지·영상 로딩 오류가 반복돼요</summary><p>네트워크를 바꿔 보고 1.1.1.1 WARP를 사용해 보세요. 특정 확장앱만 실패한다면 확장앱 설정의 주소와 인증 서버 설정도 확인하세요.</p></details>
+              <details><summary>커스텀 카드가 표시되지 않아요</summary><p>JSON과 이미지의 공개 권한, JSON 문법, 영문 요일 키를 확인하세요. 변경 후에는 최대 약 5분이 걸릴 수 있습니다.</p></details>
+              <details><summary>확장앱 업데이트는 어디서 하나요?</summary><p>Browse의 Extensions 목록에서 업데이트를 확인합니다. 설정의 자동 업데이트 옵션을 켜 두면 새 버전 확인이 편합니다.</p></details>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer><div><b>Mangayomi Guide</b><p>DC 확장앱 사용자를 위한 별도 안내 페이지입니다.</p></div><a href="#top">맨 위로 ↑</a></footer>
+    <div class="toast" role="status" aria-live="polite">주소를 복사했습니다.</div>
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="스크린샷 크게 보기"><button type="button" class="lightbox-close" aria-label="닫기">×</button><img alt="확대된 안내 스크린샷" /></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
