@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Mangayomi 설치부터 DC 확장 저장소 등록, 커스텀 목록 카드 설정까지 한 번에 안내합니다." />
+    <meta name="description" content="Mangayomi 설치부터 DC 확장 저장소 등록, 커스텀 목록 카드와 외부인증 서버 설정까지 한 번에 안내합니다." />
     <meta name="theme-color" content="#071425" />
     <title>Mangayomi 설치 및 DC 확장앱 가이드</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./download.css" />
+    <link rel="stylesheet" href="./external-auth.css" />
   </head>
   <body>
     <header class="topbar">
@@ -16,11 +17,11 @@
         <span><strong>Mangayomi Guide</strong><small>DC TOKI EXTENSIONS</small></span>
       </a>
       <nav class="desktop-nav" aria-label="주요 메뉴">
-        <a href="#install">설치</a><a href="#repository">저장소 등록</a><a href="#extensions">확장앱 설치</a><a href="#custom-card">커스텀 카드</a><a href="#help">문제 해결</a>
+        <a href="#install">설치</a><a href="#repository">저장소 등록</a><a href="#extensions">확장앱 설치</a><a href="#custom-card">커스텀 카드</a><a href="#external-auth">외부인증</a><a href="#help">문제 해결</a>
       </nav>
       <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button>
       <nav class="mobile-nav" aria-label="모바일 메뉴">
-        <a href="#install">설치</a><a href="#repository">저장소 등록</a><a href="#extensions">확장앱 설치</a><a href="#custom-card">커스텀 카드</a><a href="#help">문제 해결</a>
+        <a href="#install">설치</a><a href="#repository">저장소 등록</a><a href="#extensions">확장앱 설치</a><a href="#custom-card">커스텀 카드</a><a href="#external-auth">외부인증</a><a href="#help">문제 해결</a>
       </nav>
     </header>
 
@@ -31,7 +32,7 @@
           <div class="hero-copy">
             <span class="eyebrow">iOS · Android · Windows</span>
             <h1>Mangayomi와<br /><em>DC 확장앱</em> 시작하기</h1>
-            <p>앱 설치부터 저장소 등록, 확장앱 설치, 나만의 목록 카드 설정까지 필요한 과정만 순서대로 정리했습니다.</p>
+            <p>앱 설치부터 저장소 등록, 확장앱 설치, 나만의 목록 카드와 선택형 외부인증 서버 설정까지 필요한 과정만 순서대로 정리했습니다.</p>
             <div class="hero-actions">
               <a class="button primary" href="#install">설치 시작</a>
               <a class="button ghost" href="#repository">저장소 주소 보기</a>
@@ -39,12 +40,13 @@
             <div class="hero-notice"><span>!</span><p><b>먼저 확인</b> 네트워크 오류가 잦다면 Cloudflare 1.1.1.1 WARP 설치를 권장합니다.</p></div>
           </div>
           <aside class="hero-panel" aria-label="설치 과정 요약">
-            <div class="panel-head"><span>QUICK START</span><b>4 STEPS</b></div>
+            <div class="panel-head"><span>QUICK START</span><b>5 STEPS</b></div>
             <ol>
               <li><span>01</span><div><b>Mangayomi 설치</b><small>기기에 맞는 앱 준비</small></div></li>
               <li><span>02</span><div><b>소스 표시 허용</b><small>Browse 설정 한 번 확인</small></div></li>
               <li><span>03</span><div><b>저장소 주소 등록</b><small>만화 · 미디어 · 소설</small></div></li>
               <li><span>04</span><div><b>확장앱 설치 후 사용</b><small>원하는 소스에서 바로 감상</small></div></li>
+              <li><span>05</span><div><b>외부인증 서버 연결</b><small>필요한 사용자만 선택 설정</small></div></li>
             </ol>
           </aside>
         </div>
@@ -57,7 +59,8 @@
           <a href="#repository"><span>02</span> 저장소 등록</a>
           <a href="#extensions"><span>03</span> 확장앱 설치</a>
           <a href="#custom-card"><span>04</span> 커스텀 목록 카드</a>
-          <a href="#help"><span>05</span> 문제 해결</a>
+          <a href="#external-auth"><span>05</span> 외부인증 서버</a>
+          <a href="#help"><span>06</span> 문제 해결</a>
           <div class="side-tip"><b>주소는 복사 버튼으로</b><br />오타 없이 한 번에 등록할 수 있습니다.</div>
         </aside>
 
@@ -202,8 +205,77 @@
             </div>
           </section>
 
+          <section class="guide-section" id="external-auth">
+            <div class="chapter auth"><span>STEP 05</span><b>EXTERNAL AUTH</b></div>
+            <div class="section-title"><span>OPTIONAL SERVER</span><h2>외부인증 서버를 연결합니다</h2><p>TOTAL 토끼 만화나 토끼 소설에서 회차가 열리지 않을 때만 사용하는 선택 기능입니다. 평소 정상적으로 열리는 사용자는 설정할 필요가 없습니다.</p></div>
+
+            <div class="auth-alert"><span>선택 기능</span><div><b>기본값은 꺼짐입니다</b><p>외부인증을 켜면 해당 확장앱은 외부인증 서버만 사용합니다. 서버가 꺼져 있으면 회차가 열리지 않으므로 먼저 서버를 실행하세요.</p></div></div>
+
+            <div class="auth-downloads">
+              <article class="auth-download-card windows">
+                <div class="auth-card-head"><span>WINDOWS 10 · 11</span><b>0.4.12</b></div>
+                <h3>Windows PC에서 사용</h3>
+                <p>Docker나 NAS가 없다면 가장 간단한 방법입니다. 압축을 풀고 프로그램을 실행하면 됩니다.</p>
+                <div class="auth-actions"><a href="https://github.com/wankyo83/rabbit-auth-server-releases/releases/download/v0.4.12/RabbitAuthServer-Windows-x64-0.4.12.zip">Windows ZIP 다운로드</a><a class="sub" href="https://github.com/wankyo83/rabbit-auth-server-releases/releases/tag/v0.4.12" target="_blank" rel="noreferrer">배포 정보 ↗</a></div>
+              </article>
+              <article class="auth-download-card docker">
+                <div class="auth-card-head"><span>DOCKER · NAS</span><b>0.3.10</b></div>
+                <h3>NAS 또는 Linux에서 사용</h3>
+                <p>x86-64 NAS나 Linux 서버에서 계속 실행해 두려는 사용자에게 적합합니다.</p>
+                <div class="auth-actions"><a href="https://github.com/wankyo83/rabbit-auth-server-releases/releases/download/v0.3.10/rabbit-auth-server-docker-0.3.10.zip">Docker/NAS ZIP 다운로드</a><a class="sub" href="https://github.com/wankyo83/rabbit-auth-server-releases/releases/tag/v0.3.10" target="_blank" rel="noreferrer">배포 정보 ↗</a></div>
+              </article>
+            </div>
+
+            <div class="auth-flow" aria-label="외부인증 서버 연결 순서">
+              <article><span>01</span><div><h3>서버를 실행합니다</h3><p>Windows는 <code>RabbitAuthServer.exe</code>를 실행해 포트 <code>9870</code>과 4자 이상의 접속 키를 정한 뒤 <b>서버 시작</b>을 누릅니다.</p></div></article>
+              <article><span>02</span><div><h3>접속 주소를 확인합니다</h3><p>같은 PC는 <code>http://127.0.0.1:9870</code>, 같은 Wi-Fi의 휴대폰은 프로그램에 표시된 PC 또는 NAS의 LAN 주소를 사용합니다.</p></div></article>
+              <article><span>03</span><div><h3>확장앱에 입력합니다</h3><p>확장앱 설정에서 <b>외부인증 서버 사용</b>을 켜고 서버 주소와 같은 접속 키를 입력한 뒤 회차를 엽니다.</p></div></article>
+            </div>
+
+            <div class="auth-platform-grid">
+              <article>
+                <span>WINDOWS 빠른 설치</span>
+                <ol>
+                  <li>ZIP 전체를 한 폴더에 압축 해제합니다.</li>
+                  <li><code>RabbitAuthServer.exe</code>를 실행합니다.</li>
+                  <li>포트 <code>9870</code>과 접속 키를 입력하고 서버를 시작합니다.</li>
+                  <li>방화벽 차단 표시가 나오면 <b>방화벽 허용</b>을 누릅니다.</li>
+                </ol>
+                <p class="auth-footnote">프로그램과 PC가 켜져 있어야 사용할 수 있습니다. 절전·로그아웃·종료 상태에서는 연결되지 않습니다.</p>
+              </article>
+              <article>
+                <span>DOCKER/NAS 빠른 설치</span>
+                <ol>
+                  <li>ZIP을 NAS의 원하는 폴더에 압축 해제합니다.</li>
+                  <li><code>docker-compose.yml</code>의 <code>SERVER_KEY</code>를 원하는 키로 바꿉니다.</li>
+                  <li>Container Manager에서 해당 파일로 프로젝트를 생성합니다.</li>
+                  <li>컨테이너 상태가 <b>healthy</b>가 될 때까지 기다립니다.</li>
+                </ol>
+                <p class="auth-footnote">기본 접속 주소는 <code>http://NAS의 LAN 주소:9870</code>입니다.</p>
+              </article>
+            </div>
+
+            <div class="auth-addresses">
+              <h3>어떤 주소를 입력해야 하나요?</h3>
+              <div><span>같은 Windows PC</span><code>http://127.0.0.1:9870</code></div>
+              <div><span>같은 Wi-Fi의 휴대폰</span><code>http://192.168.x.x:9870</code></div>
+              <div><span>외부 네트워크</span><code>http://100.x.x.x:9870</code><small>Tailscale 권장</small></div>
+            </div>
+
+            <div class="critical-note auth-note"><b>주소 끝에는 아무것도 붙이지 마세요</b><p><code>http://192.168.0.10:9870</code>까지만 입력합니다. 뒤에 <code>/health</code>, <code>/v1</code>, <code>/api</code>를 붙이면 안 됩니다.</p></div>
+            <div class="notes">
+              <h3>안전하게 사용하는 방법</h3>
+              <ul>
+                <li>공유기 포트포워딩으로 인터넷에 직접 공개하지 말고, 같은 Wi-Fi/LAN 또는 Tailscale 안에서 사용하세요.</li>
+                <li>휴대폰에서 Tailscale과 Cloudflare WARP를 함께 켰을 때 연결되지 않으면 WARP를 잠시 끄고 확인하세요.</li>
+                <li>관리 화면 로그인은 사용자 이름 <code>lab</code>, 비밀번호는 서버에 설정한 접속 키입니다.</li>
+                <li>외부인증 서버는 이미지 파일을 저장하거나 중계하지 않습니다.</li>
+              </ul>
+            </div>
+          </section>
+
           <section class="guide-section last" id="help">
-            <div class="chapter"><span>STEP 05</span><b>TROUBLESHOOTING</b></div>
+            <div class="chapter"><span>STEP 06</span><b>TROUBLESHOOTING</b></div>
             <div class="section-title"><span>HELP</span><h2>잘 안 될 때 확인하세요</h2></div>
             <div class="faq">
               <details><summary>저장소를 등록했는데 확장앱이 안 보여요</summary><p><code>Show in sources and extensions lists</code>가 켜져 있는지 확인하고, Browse 화면에서 새로고침하거나 앱을 다시 실행하세요.</p></details>

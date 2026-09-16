@@ -1,6 +1,6 @@
 # DC Toki Mangayomi Guide
 
-Mangayomi 설치, DC 확장 저장소 등록, 커스텀 목록 카드 설정을 안내하는 독립 공개 설명서입니다.
+Mangayomi 설치, DC 확장 저장소 등록, 커스텀 목록 카드와 선택형 외부인증 서버 설정을 안내하는 독립 공개 설명서입니다.
 
 정적 사이트 파일은 `dist/`에 있으며 GitHub Pages로 배포됩니다.
 
